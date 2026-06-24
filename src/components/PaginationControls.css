@@ -1,0 +1,52 @@
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.pagination-controls {
+  margin-bottom: 0;
+}
+
+.pagination-controls .page-link {
+  cursor: pointer;
+  color: #007bff;
+  border: 1px solid #dee2e6;
+}
+
+.pagination-controls .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.pagination-controls .page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .pagination-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination-controls .page-item {
+    margin: 2px;
+  }
+  
+  .pagination-info {
+    text-align: center;
+  }
+}
